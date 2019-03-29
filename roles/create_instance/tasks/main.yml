@@ -7,7 +7,7 @@
     instance_type: t2.micro
     image: "{{ ami_id }}"
     wait: true
-    exact_count: "{{ count }}"
+    count: "{{ count }}"
     instance_tags:
       Name: Demo
   register: ec2
