@@ -23,6 +23,7 @@
     region: "{{ aws_region }}"
     key_name: "{{ aws_key }}"
     group: "{{ security_group_name }}"
+    vpc_id: vpc-08f37ee4b823a6fa8
     instance_type: t2.micro
     image: "{{ ami_id }}"
     wait: true
