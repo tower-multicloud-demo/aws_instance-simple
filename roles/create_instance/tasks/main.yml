@@ -7,8 +7,9 @@
     instance_type: t2.micro
     image: "{{ ami_id }}"
     wait: true
-    count: "{{ count }}"
     instance_tags:
-      Name: Demo
+        Name: towerdemo
+    exact_count: "{{ count }}"
+    count_tag: Name
   register: ec2
 
