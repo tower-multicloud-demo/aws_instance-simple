@@ -1,11 +1,12 @@
 - name: Provision a set of instances
   ec2:
-    key_name: my_key
+    region: eu-central-1
+    key_name: "{{ aws_key }}"
     group: test
     instance_type: t2.micro
     image: "{{ ami_id }}"
     wait: true
-    exact_count: 5
+    exact_count: "{{ count }}"
     count_tag:
       Name: Demo
     instance_tags:
