@@ -4,6 +4,7 @@
     name: "{{ security_group_name }}"
     description: Security group created using ansible
     region: "{{ aws_region }}"
+    vpc_id: default
     rules:
       - proto: tcp
         from_port: 80
