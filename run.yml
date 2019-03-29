@@ -3,5 +3,6 @@
   gather_facts: False
 
   tasks:
-    - include_role:
-      name: create_instance
+    - name: "Call AWS role"
+      include_role:
+        name: "create_instance"
