@@ -2,7 +2,7 @@
   ec2:
     region: eu-central-1
     key_name: "{{ aws_key }}"
-    group: test
+    group: default
     instance_type: t2.micro
     image: "{{ ami_id }}"
     wait: true
