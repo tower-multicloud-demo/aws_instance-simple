@@ -1,35 +1,14 @@
 ---
-- name: Create security Group
-  ec2_group:
-    name: "{{ security_group_name }}"
-    description: Security group created using ansible
-    region: "{{ aws_region }}"
-    vpc_id: vpc-08f37ee4b823a6fa8
-    rules:
-      - proto: tcp
-        from_port: 80
-        to_port: 80
-        cidr_ip: 0.0.0.0/0
-      - proto: tcp
-        from_port: 22
-        to_port: 22
-        cidr_ip: 0.0.0.0/0
-    rules_egress:
-      - proto: all
-        cidr_ip: 0.0.0.0/0
-
 - name: Provision a set of instances
   ec2:
     region: "{{ aws_region }}"
     key_name: "{{ aws_key }}"
-    group: "{{ security_group_name }}"
-    vpc_id: vpc-08f37ee4b823a6fa8
+    group: "{{ security_group }}"
     instance_type: t2.micro
     image: "{{ ami_id }}"
     wait: true
     exact_count: "{{ count }}"
-    count_tag:
-      Name: Demo
     instance_tags:
       Name: Demo
   register: ec2
+
