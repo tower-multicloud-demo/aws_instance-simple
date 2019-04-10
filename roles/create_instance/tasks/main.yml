@@ -9,7 +9,7 @@
     wait: true
     instance_tags:
         Name: towerdemo
-    exact_count: "{{ count }}"
+    exact_count: "{{ instcount }}"
     count_tag: Name
   register: ec2
 
