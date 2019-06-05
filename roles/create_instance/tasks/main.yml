@@ -7,11 +7,19 @@
     instance_type: t2.micro
     image: "{{ ami_id }}"
     wait: true
+    #instance_tags:
+    #    Name: towerdemo
+    #    Group: webservers
+    #exact_count: "{{ instcount }}"
+    #count_tag: 
+    #  Name: towerdemo
     instance_tags:
-        Name: towerdemo
-        Group: webservers
+      Name: towerdemo-{{item}}
+      Group: webservers
+    with_sequence:
+      count: "{{ instcount }}"
     exact_count: "{{ instcount }}"
-    count_tag: 
-      Name: towerdemo
+    count_tag:
+      Name: towerdemo*
   register: ec2
 
