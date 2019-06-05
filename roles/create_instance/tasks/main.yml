@@ -11,6 +11,7 @@
         Name: towerdemo
         Group: webservers
     exact_count: "{{ instcount }}"
-    count_tag: Name
+    count_tag: 
+      Name: towerdemo
   register: ec2
 
