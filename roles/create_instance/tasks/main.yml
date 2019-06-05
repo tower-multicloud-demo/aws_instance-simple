@@ -14,7 +14,7 @@
     #count_tag: 
     #  Name: towerdemo
     instance_tags:
-      Name: towerdemo-{{item}}
+      Name: "towerdemo-{{ item }}"
       Group: webservers
     with_sequence:
       count: "{{ instcount }}"
