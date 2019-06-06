@@ -1,5 +1,6 @@
 
 = vars to set
+
 ----
 ami_id ami-030f83540c1a25d7f
 aws_key grieger_ec2
@@ -8,6 +9,7 @@ security_group towerdemo
 ----
 
 = Create survey with var
+
 ----
 instcount
 ----
