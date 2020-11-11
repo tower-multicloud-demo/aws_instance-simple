@@ -6,6 +6,7 @@ ami_id: ami-030f83540c1a25d7f
 aws_key: grieger_ec2
 aws_region: eu-central-1
 security_group: towerdemo
+instcount: 1
 ----
 
 = Create survey with var
